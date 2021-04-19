@@ -15,3 +15,5 @@ const tiktokSchema = mongoose.Schema({
 
 
 export default mongoose.model('tiktokVideos', tiktokSchema)
+
+// module.exports = mongoose.model('tiktokVideos', tiktokSchema)

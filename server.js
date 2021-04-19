@@ -1,5 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
+
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const data = require("./data.js");
+// const videos = require("./dbModel.js");
+
+
 import data from './data.js';
 import videos from './dbModel.js';
 
@@ -10,15 +17,15 @@ import videos from './dbModel.js';
 
 // app config
 const app = express();
-const port = 9000;
+const port = process.env.PORT || 9000;
 
 
 //middlewares
 
 app.use(express.json());
 app.use((req, res, next) => {
-    res.setHeaders('Access-Control-Allow-Origin', '*'),
-    res.setHeaders('Access-Control-Allow-Headers', '*'),
+    res.setHeader('Access-Control-Allow-Origin', '*'),
+    res.setHeader('Access-Control-Allow-Headers', '*'),
     next();
 
 })

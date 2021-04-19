@@ -48,3 +48,5 @@ const data = [
 ];
 
 export default data;
+
+// modules.exports = { data };
